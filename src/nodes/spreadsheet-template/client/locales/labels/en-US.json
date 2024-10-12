@@ -1,0 +1,11 @@
+{
+  "name": "spreadsheet template",
+  "input": {
+    "name": "data"
+  },
+  "outputs": {
+    "outputFilepath": {
+      "name": "output filepath"
+    }
+  }
+}

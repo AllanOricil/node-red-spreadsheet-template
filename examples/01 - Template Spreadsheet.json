@@ -1,0 +1,89 @@
+[
+  {
+    "id": "40da3ac170695649",
+    "type": "tab",
+    "label": "Template Spreadsheet",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "c35f0cfc9cfd4928",
+    "type": "spreadsheet-template",
+    "z": "40da3ac170695649",
+    "name": "",
+    "templateFilepath": "template.xlsx",
+    "templateSheetName": "Hubspot Records",
+    "outputFilepath": "output.xlsx",
+    "templateFilepathType": "str",
+    "templateSheetNameType": "str",
+    "outputFilepathType": "str",
+    "x": 640,
+    "y": 260,
+    "wires": [["6d30308328471c03"]]
+  },
+  {
+    "id": "22e60efb14e4d226",
+    "type": "inject",
+    "z": "40da3ac170695649",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 260,
+    "wires": [["a431de3d56144a5d"]]
+  },
+  {
+    "id": "a431de3d56144a5d",
+    "type": "change",
+    "z": "40da3ac170695649",
+    "name": "data",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "[{\"A\":\"a@test.com\",\"B\":\"test\",\"C\":100,\"D\":\"A\",\"E\":\"https://test.com\"},{\"A\":\"b@test.com\",\"B\":\"test\",\"C\":200,\"D\":\"B\",\"E\":\"https://test.com\"},{\"A\":\"c@test.com\",\"B\":\"test\",\"C\":300,\"D\":\"C\",\"E\":\"https://test.com\"},{\"A\":\"d@test.com\",\"B\":\"test\",\"C\":400,\"D\":\"D\",\"E\":\"https://test.com\"}]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 450,
+    "y": 260,
+    "wires": [["c35f0cfc9cfd4928"]]
+  },
+  {
+    "id": "6d30308328471c03",
+    "type": "debug",
+    "z": "40da3ac170695649",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 260,
+    "wires": []
+  }
+]

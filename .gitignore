@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+.nrg
+*.log
+dist
+logs
+node_modules
+node-red
+
+

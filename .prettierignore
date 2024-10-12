@@ -1,0 +1,4 @@
+.husky
+.nrg
+node_modules
+dist
