@@ -18,3 +18,4 @@ esbuild.config.js
 nrg.config.js
 output.xlsx
 template.xlsx
+CHANGELOG.md

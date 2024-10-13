@@ -15,6 +15,10 @@
   },
   "homepage": "https://github.com/AllanOricil/node-red-spreadsheet-template#readme",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "keywords": [
     "node-red",
     "nrg"
