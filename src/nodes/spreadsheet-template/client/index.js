@@ -65,7 +65,7 @@ export default {
       typeField: '#node-input-dataType',
     });
 
-    $('#node-input-data').typedInput('value', this.defaults.data.value);
+    $('#node-input-data').typedInput('value', this.data);
 
     $('#node-input-templateFilepath').typedInput({
       type: 'msg',
