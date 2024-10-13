@@ -37,10 +37,14 @@ export default {
     },
   },
   paletteLabel: function () {
-    return this.name || this._('spreadsheet-template.name') || 'template';
+    return (
+      this.name || this._('spreadsheet-template.name') || 'spreadsheet-template'
+    );
   },
   label: function () {
-    return this.name || this._('spreadsheet-template.name') || 'template';
+    return (
+      this.name || this._('spreadsheet-template.name') || 'spreadsheet-template'
+    );
   },
   inputLabels: function () {
     return this._('spreadsheet-template.input.name') || 'data';

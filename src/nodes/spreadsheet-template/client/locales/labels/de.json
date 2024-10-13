@@ -1,0 +1,26 @@
+{
+  "name": "Tabellenvorlage",
+  "inputs": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Name"
+    },
+    "templateFilepath": {
+      "label": "Vorlagenpfad",
+      "placeholder": "Vorlagenpfad eingeben"
+    },
+    "templateSheetName": {
+      "label": "Vorlagenblattname",
+      "placeholder": "Vorlagenblattnamen eingeben"
+    },
+    "outputFilepath": {
+      "label": "Ausgabepfad",
+      "placeholder": "Ausgabepfad eingeben"
+    }
+  },
+  "outputs": {
+    "outputFilepath": {
+      "name": "Ausgabepfad"
+    }
+  }
+}

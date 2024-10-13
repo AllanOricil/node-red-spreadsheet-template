@@ -1,7 +1,22 @@
 {
   "name": "spreadsheet template",
-  "input": {
-    "name": "data"
+  "inputs": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Name"
+    },
+    "templateFilepath": {
+      "label": "Template Filepath",
+      "placeholder": "Enter template filepath"
+    },
+    "templateSheetName": {
+      "label": "Template Sheet Name",
+      "placeholder": "Enter template sheet name"
+    },
+    "outputFilepath": {
+      "label": "Output Filepath",
+      "placeholder": "Enter output filepath"
+    }
   },
   "outputs": {
     "outputFilepath": {

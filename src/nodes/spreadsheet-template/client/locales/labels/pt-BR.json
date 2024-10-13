@@ -1,0 +1,26 @@
+{
+  "name": "modelo de planilha",
+  "inputs": {
+    "name": {
+      "label": "Nome",
+      "placeholder": "Nome"
+    },
+    "templateFilepath": {
+      "label": "Caminho do Modelo",
+      "placeholder": "Insira o caminho do modelo"
+    },
+    "templateSheetName": {
+      "label": "Nome da Planilha do Modelo",
+      "placeholder": "Insira o nome da planilha do modelo"
+    },
+    "outputFilepath": {
+      "label": "Caminho de Saída",
+      "placeholder": "Insira o caminho de saída"
+    }
+  },
+  "outputs": {
+    "outputFilepath": {
+      "name": "caminho de saída"
+    }
+  }
+}
