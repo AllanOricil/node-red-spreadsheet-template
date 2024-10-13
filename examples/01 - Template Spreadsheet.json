@@ -11,15 +11,17 @@
     "id": "c35f0cfc9cfd4928",
     "type": "spreadsheet-template",
     "z": "40da3ac170695649",
-    "name": "",
+    "name": "msg.payload",
+    "data": "payload",
     "templateFilepath": "template.xlsx",
-    "templateSheetName": "Hubspot Records",
-    "outputFilepath": "output.xlsx",
+    "templateSheetName": "sheet-1",
+    "outputFilepath": "output-2.xlsx",
+    "dataType": "msg",
     "templateFilepathType": "str",
     "templateSheetNameType": "str",
     "outputFilepathType": "str",
-    "x": 640,
-    "y": 260,
+    "x": 610,
+    "y": 300,
     "wires": [["6d30308328471c03"]]
   },
   {
@@ -44,7 +46,7 @@
     "payload": "",
     "payloadType": "date",
     "x": 300,
-    "y": 260,
+    "y": 300,
     "wires": [["a431de3d56144a5d"]]
   },
   {
@@ -67,11 +69,270 @@
     "to": "",
     "reg": false,
     "x": 450,
-    "y": 260,
+    "y": 300,
     "wires": [["c35f0cfc9cfd4928"]]
   },
   {
     "id": "6d30308328471c03",
+    "type": "debug",
+    "z": "40da3ac170695649",
+    "name": "debug 2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "ed5ef81f4d3e9376",
+    "type": "spreadsheet-template",
+    "z": "40da3ac170695649",
+    "name": "msg.test",
+    "data": "test",
+    "templateFilepath": "template.xlsx",
+    "templateSheetName": "sheet-1",
+    "outputFilepath": "output-3.xlsx",
+    "dataType": "msg",
+    "templateFilepathType": "str",
+    "templateSheetNameType": "str",
+    "outputFilepathType": "str",
+    "x": 600,
+    "y": 400,
+    "wires": [["899c54a97ec04f95"]]
+  },
+  {
+    "id": "e3e945136eb0bb8f",
+    "type": "inject",
+    "z": "40da3ac170695649",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 400,
+    "wires": [["9eba7ea928c90578"]]
+  },
+  {
+    "id": "9eba7ea928c90578",
+    "type": "change",
+    "z": "40da3ac170695649",
+    "name": "data",
+    "rules": [
+      {
+        "t": "set",
+        "p": "test",
+        "pt": "msg",
+        "to": "[{\"A\":\"a@test.com\",\"B\":\"test\",\"C\":100,\"D\":\"A\",\"E\":\"https://test.com\"},{\"A\":\"b@test.com\",\"B\":\"test\",\"C\":200,\"D\":\"B\",\"E\":\"https://test.com\"},{\"A\":\"c@test.com\",\"B\":\"test\",\"C\":300,\"D\":\"C\",\"E\":\"https://test.com\"},{\"A\":\"d@test.com\",\"B\":\"test\",\"C\":400,\"D\":\"D\",\"E\":\"https://test.com\"}]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 450,
+    "y": 400,
+    "wires": [["ed5ef81f4d3e9376"]]
+  },
+  {
+    "id": "899c54a97ec04f95",
+    "type": "debug",
+    "z": "40da3ac170695649",
+    "name": "debug 3",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "bdd99d99f6fb02e6",
+    "type": "spreadsheet-template",
+    "z": "40da3ac170695649",
+    "name": "inline data JSON",
+    "data": "[{\"A\":\"a@test.com\",\"B\":\"test\",\"C\":100,\"D\":\"A\",\"E\":\"https://test.com\"},{\"A\":\"b@test.com\",\"B\":\"test\",\"C\":200,\"D\":\"B\",\"E\":\"https://test.com\"},{\"A\":\"c@test.com\",\"B\":\"test\",\"C\":300,\"D\":\"C\",\"E\":\"https://test.com\"},{\"A\":\"d@test.com\",\"B\":\"test\",\"C\":400,\"D\":\"D\",\"E\":\"https://test.com\"}]",
+    "templateFilepath": "template.xlsx",
+    "templateSheetName": "sheet-1",
+    "outputFilepath": "output-4.xlsx",
+    "dataType": "json",
+    "templateFilepathType": "str",
+    "templateSheetNameType": "str",
+    "outputFilepathType": "str",
+    "x": 630,
+    "y": 500,
+    "wires": [["a2ef9862babc4803"]]
+  },
+  {
+    "id": "00563588cadc9bb2",
+    "type": "inject",
+    "z": "40da3ac170695649",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 500,
+    "wires": [["bdd99d99f6fb02e6"]]
+  },
+  {
+    "id": "a2ef9862babc4803",
+    "type": "debug",
+    "z": "40da3ac170695649",
+    "name": "debug 4",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "120a9d9ec14e2667",
+    "type": "spreadsheet-template",
+    "z": "40da3ac170695649",
+    "name": "inline data jsonata",
+    "data": "[{\"A\":\"a@test.com\",\"B\":\"test\",\"C\":100,\"D\":\"A\",\"E\":\"https://test.com\"},{\"A\":\"b@test.com\",\"B\":\"test\",\"C\":200,\"D\":\"B\",\"E\":\"https://test.com\"},{\"A\":\"c@test.com\",\"B\":\"test\",\"C\":300,\"D\":\"C\",\"E\":\"https://test.com\"},{\"A\":\"d@test.com\",\"B\":\"test\",\"C\":400,\"D\":\"D\",\"E\":\"https://test.com\"}]",
+    "templateFilepath": "template.xlsx",
+    "templateSheetName": "sheet-1",
+    "outputFilepath": "output-5.xlsx",
+    "dataType": "jsonata",
+    "templateFilepathType": "str",
+    "templateSheetNameType": "str",
+    "outputFilepathType": "str",
+    "x": 630,
+    "y": 600,
+    "wires": [["cb5b5aa41e0181a6"]]
+  },
+  {
+    "id": "9dae911cd4fb00af",
+    "type": "inject",
+    "z": "40da3ac170695649",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 600,
+    "wires": [["120a9d9ec14e2667"]]
+  },
+  {
+    "id": "cb5b5aa41e0181a6",
+    "type": "debug",
+    "z": "40da3ac170695649",
+    "name": "debug 5",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "734c53749320dae3",
+    "type": "spreadsheet-template",
+    "z": "40da3ac170695649",
+    "name": "msg.data",
+    "data": "payload",
+    "templateFilepath": "template.xlsx",
+    "templateSheetName": "sheet-1",
+    "outputFilepath": "output-1.xlsx",
+    "dataType": "msg",
+    "templateFilepathType": "str",
+    "templateSheetNameType": "str",
+    "outputFilepathType": "str",
+    "x": 600,
+    "y": 200,
+    "wires": [["b04c40c602fc9818"]]
+  },
+  {
+    "id": "c832c22bd7330609",
+    "type": "inject",
+    "z": "40da3ac170695649",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 200,
+    "wires": [["ae22c632bfafd9fe"]]
+  },
+  {
+    "id": "b04c40c602fc9818",
     "type": "debug",
     "z": "40da3ac170695649",
     "name": "debug 1",
@@ -79,11 +340,85 @@
     "tosidebar": true,
     "console": false,
     "tostatus": false,
-    "complete": "false",
+    "complete": "payload",
+    "targetType": "msg",
     "statusVal": "",
     "statusType": "auto",
     "x": 840,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "ae22c632bfafd9fe",
+    "type": "change",
+    "z": "40da3ac170695649",
+    "name": "data",
+    "rules": [
+      {
+        "t": "set",
+        "p": "data",
+        "pt": "msg",
+        "to": "[{\"A\":\"a@test.com\",\"B\":\"test\",\"C\":100,\"D\":\"A\",\"E\":\"https://test.com\"},{\"A\":\"b@test.com\",\"B\":\"test\",\"C\":200,\"D\":\"B\",\"E\":\"https://test.com\"},{\"A\":\"c@test.com\",\"B\":\"test\",\"C\":300,\"D\":\"C\",\"E\":\"https://test.com\"},{\"A\":\"d@test.com\",\"B\":\"test\",\"C\":400,\"D\":\"D\",\"E\":\"https://test.com\"}]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 450,
+    "y": 200,
+    "wires": [["734c53749320dae3"]]
+  },
+  {
+    "id": "2f8e9d32d3782892",
+    "type": "comment",
+    "z": "40da3ac170695649",
+    "name": "Render using data from msg.data",
+    "info": "",
+    "x": 350,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "7dde2cc405f34e76",
+    "type": "comment",
+    "z": "40da3ac170695649",
+    "name": "Render using data from msg.payload",
+    "info": "",
+    "x": 370,
     "y": 260,
+    "wires": []
+  },
+  {
+    "id": "11e523a8d7ebcc61",
+    "type": "comment",
+    "z": "40da3ac170695649",
+    "name": "Render using data from msg.test",
+    "info": "",
+    "x": 350,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "b56b664c5e457d9b",
+    "type": "comment",
+    "z": "40da3ac170695649",
+    "name": "Render using inline JSON",
+    "info": "",
+    "x": 330,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "04a6884163714903",
+    "type": "comment",
+    "z": "40da3ac170695649",
+    "name": "Render using inline jsonata",
+    "info": "",
+    "x": 330,
+    "y": 560,
     "wires": []
   }
 ]

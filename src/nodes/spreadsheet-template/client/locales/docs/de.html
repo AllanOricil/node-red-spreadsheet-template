@@ -13,6 +13,24 @@
   </dd>
 
   <dt class="optional">
+    Daten
+    <span class="property-type">string</span>
+  </dt>
+  <dd>
+    Das Feld, das verwendet wird, um die Daten zum Erstellen der Tabelle zu
+    bestimmen. Wenn
+    <code>msg.data</code>
+    nicht existiert, werden die Zeilenwerte aus
+    <code>msg.payload</code>
+    verwendet. Der Wert, der mit
+    <code>msg.data</code>
+    festgelegt wird, hat Vorrang gegenüber dem Wert im Formular der
+    Node-Eigenschaften und
+    <code>msg.payload</code>
+    .
+  </dd>
+
+  <dt class="optional">
     templateFilepath
     <span class="property-type">String</span>
   </dt>

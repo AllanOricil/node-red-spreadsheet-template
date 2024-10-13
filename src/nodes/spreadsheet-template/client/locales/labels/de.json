@@ -5,6 +5,10 @@
       "label": "Name",
       "placeholder": "Name"
     },
+    "data": {
+      "label": "Daten",
+      "placeholder": "JSON-Daten eingeben"
+    },
     "templateFilepath": {
       "label": "Vorlagenpfad",
       "placeholder": "Vorlagenpfad eingeben"

@@ -5,6 +5,10 @@
       "label": "Nome",
       "placeholder": "Nome"
     },
+    "data": {
+      "label": "Dados",
+      "placeholder": "Insira os dados JSON"
+    },
     "templateFilepath": {
       "label": "Caminho do Modelo",
       "placeholder": "Insira o caminho do modelo"

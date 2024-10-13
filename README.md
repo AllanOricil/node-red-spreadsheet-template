@@ -45,7 +45,7 @@ Like the `payload`, all other inputs can be set using the `msg` object, as follo
 
 ### 4 - Run the flow
 
-<img src="./docs/success.png" width="500px"/>
+<img src="./docs/success.png" width="1200px"/>
 
 ### 5 - Verify the output.xlsx
 

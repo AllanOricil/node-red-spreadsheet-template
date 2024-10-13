@@ -13,6 +13,23 @@
   </dd>
 
   <dt class="optional">
+    dados
+    <span class="property-type">string</span>
+  </dt>
+  <dd>
+    O campo utilizado para definir os dados usados para renderizar a planilha.
+    Quando
+    <code>msg.data</code>
+    não existe, os valores das linhas vêm de
+    <code>msg.payload</code>
+    . O valor definido usando
+    <code>msg.data</code>
+    tem precedência sobre o valor definido no formulário de propriedades do nó e
+    <code>msg.payload</code>
+    .
+  </dd>
+
+  <dt class="optional">
     templateFilepath
     <span class="property-type">string</span>
   </dt>

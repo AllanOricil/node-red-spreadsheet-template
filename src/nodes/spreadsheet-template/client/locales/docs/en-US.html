@@ -12,6 +12,21 @@
   </dd>
 
   <dt class="optional">
+    data
+    <span class="property-type">string</span>
+  </dt>
+  <dd>
+    the field used to resolve the data used to render the spreadsheet. When
+    <code>msg.data</code>
+    doesn't exist, the row values come from
+    <code>msg.payload</code>
+    The value set using
+    <code>msg.data</code>
+    has precedence over the value set in the node properties form and
+    <code>msg.payload</code>
+  </dd>
+
+  <dt class="optional">
     templateFilepath
     <span class="property-type">string</span>
   </dt>

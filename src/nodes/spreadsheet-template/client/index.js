@@ -10,6 +10,9 @@ export default {
     name: {
       value: '',
     },
+    data: {
+      value: 'payload',
+    },
     templateFilepath: {
       value: 'template.xlsx',
       required: true,
@@ -25,6 +28,9 @@ export default {
       required: true,
       validate: (value) =>
         validateFilepathInput(value, '#node-input-outputFilepathType'),
+    },
+    dataType: {
+      value: 'msg',
     },
     templateFilepathType: {
       value: 'str',
@@ -53,6 +59,14 @@ export default {
     return `${this._('spreadsheet-template.outputs.outputFilepath.name') || 'output filepath'}`;
   },
   oneditprepare: function () {
+    $('#node-input-data').typedInput({
+      type: 'json',
+      types: ['msg', 'json', 'jsonata'],
+      typeField: '#node-input-dataType',
+    });
+
+    $('#node-input-data').typedInput('value', this.defaults.data.value);
+
     $('#node-input-templateFilepath').typedInput({
       type: 'msg',
       types: ['msg', 'str'],

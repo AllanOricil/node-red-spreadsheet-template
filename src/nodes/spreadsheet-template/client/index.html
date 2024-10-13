@@ -11,8 +11,20 @@
     />
   </div>
   <div class="form-row">
+    <label for="node-input-data">
+      <i class="fa fa-database"></i>
+      <span data-i18n="spreadsheet-template.inputs.data.label"></span>
+    </label>
+    <input
+      type="text"
+      id="node-input-data"
+      data-i18n="[placeholder]spreadsheet-template.inputs.data.placeholder"
+    />
+    <input type="hidden" id="node-input-dataType" />
+  </div>
+  <div class="form-row">
     <label for="node-input-templateFilepath">
-      <i class="fa fa-table"></i>
+      <i class="fa fa-file"></i>
       <span
         data-i18n="spreadsheet-template.inputs.templateFilepath.label"
       ></span>
@@ -40,7 +52,7 @@
   </div>
   <div class="form-row">
     <label for="node-input-outputFilepath">
-      <i class="fa fa-table"></i>
+      <i class="fa fa-file"></i>
       <span data-i18n="spreadsheet-template.inputs.outputFilepath.label"></span>
     </label>
     <input

@@ -15,19 +15,40 @@ export default class SpreadsheetTemplate extends Node {
   constructor(config) {
     super(config);
 
+    this.data = config.data || undefined;
     this.templateFilepath = config.templateFilepath || '';
     this.templateSheetName = config.templateSheetName || '';
     this.outputFilepath = config.outputFilepath || '';
+    this.dataType = config.dataType || 'msg';
     this.templateFilepathType = config.templateFilepathType || 'str';
     this.templateSheetNameType = config.templateSheetNameType || 'str';
     this.outputFilepathType = config.outputFilepathType || 'str';
+  }
+
+  async evaluateProperty(value, type, msg) {
+    return new Promise((resolve, reject) => {
+      SpreadsheetTemplate.RED.util.evaluateNodeProperty(
+        value,
+        type,
+        this,
+        msg,
+        (err, result) => {
+          if (err) return reject(err);
+          resolve(result);
+        },
+      );
+    });
   }
 
   async onInput(msg, send, done) {
     try {
       this.status({});
 
-      const data = msg.payload;
+      const data =
+        msg.data ||
+        (await this.evaluateProperty(this.data, this.dataType, msg)) ||
+        msg.payload;
+
       if (
         !(
           Array.isArray(data) &&
@@ -45,30 +66,27 @@ export default class SpreadsheetTemplate extends Node {
 
       const templateFilepath =
         msg.templateFilepath ||
-        SpreadsheetTemplate.RED.util.evaluateNodeProperty(
+        (await this.evaluateProperty(
           this.templateFilepath,
           this.templateFilepathType,
-          this,
           msg,
-        );
+        ));
 
       const templateSheetName =
         msg.templateSheetName ||
-        SpreadsheetTemplate.RED.util.evaluateNodeProperty(
+        (await this.evaluateProperty(
           this.templateSheetName,
           this.templateSheetNameType,
-          this,
           msg,
-        );
+        ));
 
       const outputFilepath =
         msg.outputFilepath ||
-        SpreadsheetTemplate.RED.util.evaluateNodeProperty(
+        (await this.evaluateProperty(
           this.outputFilepath,
           this.outputFilepathType,
-          this,
           msg,
-        );
+        ));
 
       if (!templateFilepath) {
         this.status({

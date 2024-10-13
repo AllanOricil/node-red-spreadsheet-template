@@ -5,6 +5,10 @@
       "label": "Name",
       "placeholder": "Name"
     },
+    "data": {
+      "label": "Data",
+      "placeholder": "Enter json data"
+    },
     "templateFilepath": {
       "label": "Template Filepath",
       "placeholder": "Enter template filepath"
