@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.1...v1.1.2) (2024-10-13)
+
+
+### Bug Fixes
+
+* enable provenance to releases ([3f0ecf4](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/3f0ecf45ffa601764a8895cdc2889da6f4c206bf))
+
 ## [1.1.1](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.0...v1.1.1) (2024-10-13)
 
 
