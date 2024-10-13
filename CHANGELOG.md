@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.3...v1.1.4) (2024-10-13)
+
+
+### Bug Fixes
+
+* templateFilepath, templateSheetName and outputFilepath are typed inputs again ([f35375c](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/f35375c4f6800fec355451f080c4860119c99067))
+
 ## [1.1.3](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.2...v1.1.3) (2024-10-13)
 
 
