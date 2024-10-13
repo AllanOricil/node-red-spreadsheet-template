@@ -52,9 +52,7 @@
     }
   },
   "dependencies": {
-    "exceljs": "^4.4.0",
-    "xlsx": "^0.18.5",
-    "xlsx-style": "^0.8.13"
+    "exceljs": "^4.4.0"
   },
   "devDependencies": {
     "@allanoricil/nrg-cli": "2.0.1",
