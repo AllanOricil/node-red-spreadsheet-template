@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.0...v1.1.1) (2024-10-13)
+
+
+### Bug Fixes
+
+* **deps:** remove xlsx and xlsx-style ([4c09acf](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/4c09acfc9b7ce144861578cb7c2defacc7797297))
+
 # [1.1.0](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.0.0...v1.1.0) (2024-10-13)
 
 
