@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.2...v1.1.3) (2024-10-13)
+
+
+### Bug Fixes
+
+* use evaluateProperty from the base Node class ([a9b2df8](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/a9b2df8dea9b3b269bfe68bd76d67086ffdd5eb5))
+
 ## [1.1.2](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.1...v1.1.2) (2024-10-13)
 
 
