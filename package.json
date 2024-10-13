@@ -59,7 +59,7 @@
     "exceljs": "^4.4.0"
   },
   "devDependencies": {
-    "@allanoricil/nrg-cli": "2.0.1",
+    "@allanoricil/nrg-cli": "2.2.0",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@semantic-release/changelog": "6.0.3",

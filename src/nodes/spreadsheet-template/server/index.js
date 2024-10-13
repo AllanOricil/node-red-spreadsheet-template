@@ -25,21 +25,6 @@ export default class SpreadsheetTemplate extends Node {
     this.outputFilepathType = config.outputFilepathType || 'str';
   }
 
-  async evaluateProperty(value, type, msg) {
-    return new Promise((resolve, reject) => {
-      SpreadsheetTemplate.RED.util.evaluateNodeProperty(
-        value,
-        type,
-        this,
-        msg,
-        (err, result) => {
-          if (err) return reject(err);
-          resolve(result);
-        },
-      );
-    });
-  }
-
   async onInput(msg, send, done) {
     try {
       this.status({});
