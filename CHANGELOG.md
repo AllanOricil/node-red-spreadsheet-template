@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.4...v1.1.5) (2024-10-15)
+
+
+### Bug Fixes
+
+* remove dist.zip from published package ([fc0d5d7](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/fc0d5d78111dcd5f307996391aa611ec23157c11))
+* remove docs from published package ([b301110](https://github.com/AllanOricil/node-red-spreadsheet-template/commit/b301110ad1fcab312bf66ddce4ac0e81b3fde2dd))
+
 ## [1.1.4](https://github.com/AllanOricil/node-red-spreadsheet-template/compare/v1.1.3...v1.1.4) (2024-10-13)
 
 
