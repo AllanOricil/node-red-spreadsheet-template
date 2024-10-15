@@ -9,6 +9,7 @@
 .releaserc.json
 .npmrc
 .nrg
+docs
 node_modules
 node-red
 src

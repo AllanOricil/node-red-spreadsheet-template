@@ -8,7 +8,7 @@
 
 Use this node to create spreadsheets using a spreadsheet template.
 
-![flow](./docs/flow.png)
+![flow](../main/docs/flow.png?raw=true)
 
 ## 📖 How to test your node
 
